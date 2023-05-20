@@ -100,18 +100,17 @@ body{
     /* Darker background-color on hover */
     ul li:hover {
         background: #ddd;
-        width: 100%;
     }
     
     /* When clicked on, add a background color and strike out text */
-    ul li.checked {
+    .done ul li.checked {
         background: #888;
         color: #fff;
-        text-decoration: line-through;
+        text-decoration: line-through;  
     }
     
     /* Add a "checked" mark when clicked on */
-    ul li.checked::before {
+    .done ul li.checked::before {
         /*content: '';*/
         position: absolute;
         border-color: #fff;
@@ -124,6 +123,9 @@ body{
         width: 7px;
         width: 100%;
     }
+
+
+
     
     /* Style the close button */
     .close {

@@ -24,13 +24,25 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
+// Click on a done button to put line through the current list item
+var done = document.getElementsByClassName("done");
+var i;
+for (i = 0; i < done.length; i++) {
+    done[i].onclick = function() {
+    var li = this.parentElement;
+    li.style.textDecoration = "line-through";
+  }
+}
+
+
+
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+/*var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
-}, false);
+}, false);*/
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -62,4 +74,13 @@ function newElement() {
       div.style.display = "none";
     }
   }
+
+  for (i = 0; i < done.length; i++) {
+    done[i].onclick = function() {
+    var li = this.parentElement;
+    li.style.textDecoration = "line-through";
+  }
+}
+
+  
 }
