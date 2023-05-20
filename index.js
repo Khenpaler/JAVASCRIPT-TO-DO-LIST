@@ -3,9 +3,14 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var span1 = document.createElement("SPAN");
+  var txt1 = document.createTextNode("DONE");
+  var txt = document.createTextNode("CLOSE");
+  span1.className = "done";
   span.className = "close";
+  span1.appendChild(txt1);
   span.appendChild(txt);
+  myNodelist[i].appendChild(span1);
   myNodelist[i].appendChild(span);
 }
 
@@ -41,10 +46,15 @@ function newElement() {
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
+  var span1 = document.createElement("SPAN");
+  var txt1 = document.createTextNode("DONE");
+  var txt = document.createTextNode("CLOSE");
+  span1.className = "done";
   span.className = "close";
+  span1.appendChild(txt1);
   span.appendChild(txt);
-  li.appendChild(span);
+  myNodelist[i].appendChild(span1);
+  myNodelist[i].appendChild(span);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
